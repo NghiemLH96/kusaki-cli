@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+$navlinks:"Fredericka the Great", serif;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+
+    .promo__container {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #d4cfcf;
+
+        .promo__text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #58585a;
+        }
+    }
+
+    .navbar__container {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid #d4cfcf;
+
+        .navbar__container_left {
+            width: 15%;
+            height: 100%;
+
+            .logo__container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px 20px;
+
+                .logo {
+                    width: 100%;
+                }
+            }
+        }
+        .column__line{
+            list-style-type: none;
+            width: 1px;
+            height: 40px;
+            background-color: #d4cfcf;
+        }
+        .navbar__container_right {
+            width: 85%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 50px;
+
+            .navlinks__container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .navlinks {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    list-style-type: none;
+                    height: 100%;
+
+                    .navlink {
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+                        padding: 0px 20px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        &:hover{
+                            .navlink__frame{
+                                top: 0;
+                            }
+                            button{
+                                transform: rotate(0deg);
+                                color: #ffffff;
+                            }
+                        }
+                        .navlink__frame{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            background-color: #58585a;
+                            top: -110%;
+                            transition: all 0.5s ease-in-out;
+                        }
+                        button {
+                            background-color: transparent;
+                            border: none;
+                            font-family: $navlinks;
+                            font-weight: 500;
+                            font-size: 18px;
+                            transform: rotate(5deg);
+                            cursor: pointer;
+                            transition: all 0.3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .info__container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                padding: 0px 20px;
+
+                .info__content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .info__item {
+                        width: 50px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100%;
+
+                        button {
+                            border: none;
+                            background-color: transparent;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
