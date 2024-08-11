@@ -1,8 +1,13 @@
+import { useEffect, useState } from 'react';
 import './header.scss'
 import { Person, Search, FavoriteBorder, ShoppingCartOutlined, InfoOutlined } from '@mui/icons-material';
+import SubMenu from './subMenu/SubMenu';
 
 
 export default function Header() {
+
+    const [menuStatus, setMenuStatus] = useState(0)
+
     return (
         <header>
             <section className='promo__container'>
@@ -24,23 +29,26 @@ export default function Header() {
                                 <span className='navlink__frame'></span>
                                 <button>New Arrived</button>
                             </li>
-                            <li className='navlink'>
+                            <li className={menuStatus == 1 ? 'navlink active' : 'navlink'} onClick={() => { menuStatus == 1 ? setMenuStatus(0) : setMenuStatus(1) }}>
                                 <span className='navlink__frame'></span>
                                 <button>Man</button>
                             </li>
-                            <li className='navlink'>
+                            <li className={menuStatus == 2 ? 'navlink active' : 'navlink'} onClick={() => { menuStatus == 2 ? setMenuStatus(0) : setMenuStatus(2) }}>
                                 <span className='navlink__frame'></span>
                                 <button>Woman</button>
                             </li>
-                            <li className='navlink'>
+                            <li className={menuStatus == 3 ? 'navlink active' : 'navlink'} onClick={() => { menuStatus == 3 ? setMenuStatus(0) : setMenuStatus(3) }}>
                                 <span className='navlink__frame'></span>
                                 <button>Kids</button>
                             </li>
-                            <li className='navlink'>
+                            <li className={menuStatus == 4 ? 'navlink active' : 'navlink'} onClick={() => { menuStatus == 4 ? setMenuStatus(0) : setMenuStatus(4) }}>
                                 <span className='navlink__frame'></span>
                                 <button>Accessories</button>
                             </li>
                         </ul>
+                        <section className={menuStatus != 0 ? 'subMenu__container active' : 'subMenu__container'}>
+                            <SubMenu menuStatus={menuStatus}/>
+                        </section>
                     </div>
                     <div className='info__container'>
                         <ul className='info__content'>
@@ -63,6 +71,7 @@ export default function Header() {
                     </div>
                 </div>
             </section>
+
         </header>
     )
 }

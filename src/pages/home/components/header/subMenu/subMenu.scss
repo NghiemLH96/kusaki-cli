@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+$sublinks: "Noto Serif", serif;
+
+.subMenu__list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style-type: none;
+    .item__title{
+        width: 100%;
+        padding: 10px 10px;
+        font-size: 15px;
+        font-family: $sublinks;
+        text-align: start;
+        cursor: pointer;
+        &:hover{
+            background-color: rgba(88, 88, 90, 0.403);
+            color:#ffffff;
+            text-decoration: underline;
+        }
+    }
+}   

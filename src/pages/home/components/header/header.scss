@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 $navlinks:"Fredericka the Great", serif;
+
 * {
     padding: 0;
     margin: 0;
@@ -17,7 +18,7 @@ header {
         justify-content: center;
         align-items: center;
         border-bottom: 1px solid #d4cfcf;
-
+        
         .promo__text {
             font-size: 20px;
             font-weight: 700;
@@ -70,7 +71,23 @@ header {
                 display: flex;
                 justify-content: start;
                 align-items: center;
-
+                position: relative;
+                .subMenu__container{
+                    position: absolute;
+                    width: 100%;
+                    height: fit-content;
+                    background-color: #aaaaaf80;
+                    top: 100%;
+                    opacity: 0;
+                    z-index: -1;
+                    border-radius: 10px;
+                    padding: 15px;
+                    &.active{
+                        top: 110%;
+                        opacity: 1;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
                 .navlinks {
                     display: flex;
                     justify-content: center;
@@ -86,16 +103,8 @@ header {
                         height: 100%;
                         padding: 0px 20px;
                         overflow: hidden;
+                        transition: all 0.5s ease-in-out;
                         cursor: pointer;
-                        &:hover{
-                            .navlink__frame{
-                                top: 0;
-                            }
-                            button{
-                                transform: rotate(0deg);
-                                color: #ffffff;
-                            }
-                        }
                         .navlink__frame{
                             position: absolute;
                             width: 100%;
@@ -112,7 +121,27 @@ header {
                             font-size: 18px;
                             transform: rotate(5deg);
                             cursor: pointer;
-                            transition: all 0.3s ease-in-out;
+                            transition: all 0.5s ease-in-out;
+                        }
+                        &:hover{
+                            .navlink__frame{
+                                top: 0;
+                            }
+                            button{
+                                transform: rotate(0deg);
+                                text-decoration: underline;
+                                color: #ffffff;
+                            }
+                        }
+                        &.active{
+                            .navlink__frame{
+                                top: 0;
+                            }
+                            button{
+                                transform: rotate(0deg);
+                                text-decoration: underline;
+                                color: #ffffff;
+                            }
                         }
                     }
                 }
@@ -127,21 +156,27 @@ header {
                 padding: 0px 20px;
 
                 .info__content {
+                    height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
 
                     .info__item {
                         width: 50px;
+                        height: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        height: 100%;
+                        cursor: pointer;
 
+                        &:hover{
+                            background-color: #E8E8E8;
+                        }
                         button {
+                            height: 100%;
                             border: none;
                             background-color: transparent;
-                            cursor: pointer;
+
                         }
                     }
                 }
