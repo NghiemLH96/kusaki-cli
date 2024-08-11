@@ -119,7 +119,6 @@ header {
                             font-family: $navlinks;
                             font-weight: 500;
                             font-size: 18px;
-                            transform: rotate(5deg);
                             cursor: pointer;
                             transition: all 0.5s ease-in-out;
                         }
@@ -128,9 +127,9 @@ header {
                                 top: 0;
                             }
                             button{
-                                transform: rotate(0deg);
                                 text-decoration: underline;
                                 color: #ffffff;
+                                z-index: 1;
                             }
                         }
                         &.active{

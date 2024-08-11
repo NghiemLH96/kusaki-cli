@@ -1,4 +1,3 @@
-import React from 'react'
 import './subMenu.scss'
 
 export default function SubMenu(props:{menuStatus:number}) {

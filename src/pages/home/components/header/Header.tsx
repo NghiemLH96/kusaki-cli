@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './header.scss'
 import { Person, Search, FavoriteBorder, ShoppingCartOutlined, InfoOutlined } from '@mui/icons-material';
 import SubMenu from './subMenu/SubMenu';
