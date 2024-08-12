@@ -1,13 +1,11 @@
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
-import { Outlet } from 'react-router-dom'
+import './home.scss'
+import '../page.scss'
+import HomeCarousel from './components/banner/HomeCarousel'
 
 export default function Home() {
   return (
-    <div>
-        <Header/>
-        <Outlet/>
-        <Footer/>
-    </div>
+    <section className='page__container'>
+        <HomeCarousel/>
+    </section>
   )
 }

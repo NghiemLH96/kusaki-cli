@@ -1,0 +1,61 @@
+.carousel__container{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    .point__container{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 20px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        .point__list{
+            display: flex;
+            column-gap: 10px;
+            color: #9b9b9b;
+            list-style-type: none;
+            .point{
+                cursor: pointer;
+                &.active{
+                    color:black;
+                }
+            }
+        }
+    }
+    .carousel__btn{
+        height: 100%;
+        width: 50px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        &:hover{
+            background-color:#aaaaaf80 ;
+        }
+        &.prev{
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        &.next{
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+    }
+    .slides__container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: all 1s;
+        .slide{
+            width: 100%;
+            height: 100%;
+            transition: all 1s;
+        }
+    }
+}
