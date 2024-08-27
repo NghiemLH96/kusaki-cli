@@ -49,7 +49,7 @@ export default function HomeCarousel() {
             {
                 slideImgs.map((item) => {
                     return (
-                        <img src={item} alt="" />
+                        <img className='slide' src={item} alt="" />
                     )
                 })
             }
